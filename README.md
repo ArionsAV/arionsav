@@ -2,7 +2,7 @@
 
 --- This project is still on development ---
 
-## Intruduction
+## Introduction
 
 ArionsAV ...
 
