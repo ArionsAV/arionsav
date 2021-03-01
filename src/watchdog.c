@@ -1,3 +1,15 @@
+/*
+
+	This code is part of the ArionsAV project.
+	
+	NOTES:
+		- Mar_01-21: Check config, binaries etc permissions aswell to make sure all is okay
+		- Mar_01-21: Check file existence (to avoid problems)
+		- Mar-01-21: Report errors to file to notify users, perform actions on other processes etc
+
+
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

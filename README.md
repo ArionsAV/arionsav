@@ -2,6 +2,8 @@
 
 --- This project is still on development ---
 
+![Logo](./logo.jpg)
+
 ## Introduction
 
 ArionsAV ...
