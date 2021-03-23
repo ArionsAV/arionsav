@@ -24,38 +24,38 @@ NOTES:
 */
 
 
-#ifndef
+#ifndef AGENT_LOG_FILE
 #define AGENT_LOG_FILE "/var/log/arionsav/agent/agent.log"
 #endif
 
-#ifndef
+#ifndef AGENT_ERROR_LOG_FILE
 #define AGENT_ERROR_LOG_FILE "/var/log/arionsav/agent/agent.log"
 #endif
-
-#ifndef
+ 
+#ifndef SERVICE_LOG_FILE
 #define SERVICE_LOG_FILE "/var/log/arionsav/service/service.log"
 #endif
 
-#ifndef
+#ifndef SERVICE_ERROR_LOG_FILE
 #define SERVICE_ERROR_LOG_FILE "/var/log/arionsav/service/service.log"
 #endif
 
-#ifndef
+#ifndef WATCHDOG_LOG_FILE
 #define WATCHDOG_LOG_FILE "/var/log/arionsav/watchdog/watchdog.log"
 #endif
 
-#ifndef
+#ifndef WATCHDOG_ERROR_LOG_FILE
 #define WATCHDOG_ERROR_LOG_FILE "/var/log/arionsav/watchdog/watchdog.log"
 #endif
 
 
 /* size-related */
 
-#ifndef
+#ifndef MAX_APPEND_DATA
 #define MAX_APPEND_DATA 8096
 #endif
 
-#ifndef
+#ifndef MAX_TIME_SZ
 #define MAX_TIME_SZ 18
 #endif
 

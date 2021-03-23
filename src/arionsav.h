@@ -25,25 +25,25 @@ NOTES:
 
 
 
-#ifndef 
+#ifndef MIN_ARGS_N
 #define MIN_ARGS_N 2
 #endif
 
-#ifndef
+#ifndef ASLR_CONF_PATH
 #define ASLR_CONF_PATH "/proc/sys/kernel/randomize_va_space"
 #endif
 
 /* commands */
 
-#ifndef
+#ifndef CMD_HELP
 #define CMD_HELP "help"
 #endif
 
-#ifndef
+#ifndef CMD_DB_UPDATE
 #define CMD_DB_UPDATE "db_update"
 #endif
 
-#ifndef
+#ifndef CMD_AV_UPDATE
 #define CMD_AV_UPDATE "av_update"
 #endif
 

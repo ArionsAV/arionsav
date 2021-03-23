@@ -26,36 +26,37 @@ NOTES:
 
 /* pt_t valiues */
 
-#ifndef
+#ifndef PT_MAIN
 #define PT_MAIN 0
 #endif
 
-#ifndef
+#ifndef PT_SERVICE
 #define PT_SERVICE 1
 #endif
 
-#ifndef
+#ifndef PT_AGENT
 #define PT_AGENT 2
 #endif
 
-#ifndef
+#ifndef PT_KMOD
 #define PT_KMOD 3
 #endif
 
-#ifndef
+#ifndef PT_INTEGRITY
 #define PT_INTEGRITY 4
 #endif
 
 /* static values */
 
-#ifndef
+#ifndef MAX_PT_STRUCTS
 #define MAX_PT_STRUCTS 4
 #endif
 
-#ifndef
+#ifndef PT_MAIN_WAIT
 #define PT_MAIN_WAIT 30 // 60
 #endif
 
-#ifndef
+#ifndef WD_CHECK_DELAY
 #define WD_CHECK_DELAY 60
 #endif
+

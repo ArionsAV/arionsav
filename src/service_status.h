@@ -22,14 +22,14 @@ NOTES:
 
 */
 
-#ifndef
+#ifndef SERVICE_PROC
 #define SERVICE_PROC ""
 #endif
 
-#ifndef
+#ifndef AGENT_PROC
 #define AGENT_PROC ""
 #endif
 
-#ifndef
+#ifndef WATCHDOG_PROC
 #define WATCHDOG_PROC ""
 #endif

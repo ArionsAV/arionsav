@@ -22,7 +22,7 @@ NOTES:
 
 */
 
-#ifndef
+#ifndef CHECK_UPDATE_DELAY
 #define CHECK_UPDATE_DELAY 3600*24 /* once a day? */
 #endif
 

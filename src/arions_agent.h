@@ -24,18 +24,18 @@ NOTES:
 */
 
 
-#ifndef
+#ifndef WD_INT_CHECK_DELAY
 #define WD_INT_CHECK_DELAY 60
 #endif
 
-#ifndef
+#ifndef C_MAIN_WAIT
 #define C_MAIN_WAIT 30 // 60
 #endif
 
-#ifndef
+#ifndef SRV_DB_DELAY
 #define SRV_DB_DELAY 60*60
 #endif
 
-#ifndef
+#ifndef SRV_AV_DELAY
 #define SRV_AV_DELAY (60*60)*24
 #endif

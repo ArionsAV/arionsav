@@ -24,10 +24,10 @@ NOTES:
 */
 
 
-#ifndef
+#ifndef UPDATE_TYPE_DB
 #define UPDATE_TYPE_DB 0
 #endif
 
-#ifndef
+#ifndef UPDATE_TYPE_AV
 #define UPDATE_TYPE_AV 1
 #endif

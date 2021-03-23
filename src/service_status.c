@@ -37,7 +37,7 @@ NOTES:
 
 #ifndef DEPMOD_P
 #define DEPMOD_P "/usr/sbin/depmod"
-#ifndef
+#endif
 
 int file_exists(const char *filename) {
 	FILE *file = NULL;
