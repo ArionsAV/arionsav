@@ -19,9 +19,10 @@ echo "[OK] Script running as root.";
 echo "[INFO] Installing ArionsAV dependencies...";
 
 APT_MAIN_DEP="gcc make"
-APT_LIB_DEP=""
+APT_LIB_DEP="libnotify-dev "
 
-sudo apt-get install $APT_MAIN_DEP $APT_LIB_DEP
+sudo apt-get install $APT_MAIN_DEP
+sudo apt-get install $APT_LIB_DEP
 
 echo "[OK] Dependencies installed.";
 

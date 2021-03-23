@@ -1,0 +1,48 @@
+SECURITY PRACTICES
+=====================
+
+A small guide on some rules that may be followed when developing ArionsAV code.
+
+Variables
+------------
+
+- Initialize all the integer-related variables with 0
+- Initialize all the pointers with NULL (better a NULL ptr deref than a LPE)
+- Initialize whole buffers with NULL bytes
+
+Dynamic memory
+------------------
+
+- Do NOT use malloc or calloc directly, use the wrapper xalloc(), it uses a heap cookie and memset's content
+- Always NULL pointers after freeing them
+- Instead of free(), xfree() wrapper must be used
+
+Bytes
+---------
+
+- Do NOT use any function that does not takes care about destination size:
+	- strcpy
+	- gets
+	- sprintf
+	...
+- If possible, do NOT use libc functions for copying strings, use the custom strxcpy(), it will take care of both destination and origin size to avoid OOB read
+- If wanting to use snprintf, use the wrapper xsnprintf()
+- If a string, enter always a NULL byte in the last position after a copy to avoid memory leaks
+- Replace all strcmp's with strncmp's to avoid problems and memory leaks
+
+Parallelism
+------------
+
+- Multithreading is a complex topic that must be taken into account in a software security perspective, mutexes must be used to avoid race conditions, also the areas where multithreading is active or dangerous zones must be marked with a comment so developers can analyze it faster to identify flaws.
+
+
+DoS/Crashes
+------------
+
+- Avoid NULL pointer dereference checking always pointer before using them, if NULL do something else.
+
+Integer overflows/OOB indexes
+-------------------------------
+
+- Always check bound ranges before using an integer as a pointer index
+- Do NOT compare or operate between unsigned, signed, long's or shorts. And always check range values
