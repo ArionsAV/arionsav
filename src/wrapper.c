@@ -1,12 +1,28 @@
 /*
 
-Heap cookies will decrease performance, but will improve security and make heap overflow exploitation a bit harder. But... does it worth it?
-MitiGator visited us maybe!
 
-NOTE:
-	- If cookie space is out, program will fail. Implement a way to increase space for cookies... Maybe with linked lists and dynamic memory?
+    _         _                    ___     __
+   / \   _ __(_) ___  _ __  ___   / \ \   / /
+  / _ \ | '__| |/ _ \| '_ \/ __| / _ \ \ / / 
+ / ___ \| |  | | (_) | | | \__ \/ ___ \ V /  
+/_/   \_\_|  |_|\___/|_| |_|___/_/   \_\_/   
+                                            
+                                            
+     -- This code is part of the ArionsAV project --
+     
+           << Code under GNU General Public License >>
+          
+      [ Src: https://github.com/ArionsAV/arionsav ]
 	
+
+Name: wrapper
+Description: Mainly wrapper functions for security improvements on dynamic memory usage
+
+NOTES:
+	- Mar_23-21: If cookie space is out, program will fail. Implement a way to increase space for cookies... Maybe with linked lists and dynamic memory?
+	- Mar_23-21: Heap cookies will decrease performance, but will improve security and make heap overflow exploitation a bit harder. But... does it worth it? MitiGator visited us maybe!	
 */
+
 
 #ifndef HEAP_COOKIE_SZ
 #define HEAP_COOKIE_SZ SYS_BITS/8 /* if system is 32 bits SYS_BITS will be 4, else 64 if 64 bit system */

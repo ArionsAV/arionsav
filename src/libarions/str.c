@@ -1,6 +1,27 @@
 /*
 
+
+    _         _                    ___     __
+   / \   _ __(_) ___  _ __  ___   / \ \   / /
+  / _ \ | '__| |/ _ \| '_ \/ __| / _ \ \ / / 
+ / ___ \| |  | | (_) | | | \__ \/ ___ \ V /  
+/_/   \_\_|  |_|\___/|_| |_|___/_/   \_\_/   
+                                            
+                                            
+     -- This code is part of the ArionsAV project --
+     
+           << Code under GNU General Public License >>
+          
+      [ Src: https://github.com/ArionsAV/arionsav ]
+	
+
+Name: str
+Description: String-managing functions
+
+NOTES:
+	
 */
+
 
 #ifndef IGNORE_DST_MISMATCH
 #define IGNORE_DST_MISMATCH 0 /* ignore if destination buffer is less than strlen of origin (and just copy until limit is reached ) */

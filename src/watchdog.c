@@ -1,14 +1,30 @@
 /*
 
-	This code is part of the ArionsAV project.
+
+    _         _                    ___     __
+   / \   _ __(_) ___  _ __  ___   / \ \   / /
+  / _ \ | '__| |/ _ \| '_ \/ __| / _ \ \ / / 
+ / ___ \| |  | | (_) | | | \__ \/ ___ \ V /  
+/_/   \_\_|  |_|\___/|_| |_|___/_/   \_\_/   
+                                            
+                                            
+     -- This code is part of the ArionsAV project --
+     
+           << Code under GNU General Public License >>
+          
+      [ Src: https://github.com/ArionsAV/arionsav ]
 	
-	NOTES:
-		- Mar_01-21: Check config, binaries etc permissions aswell to make sure all is okay
-		- Mar_01-21: Check file existence (to avoid problems)
-		- Mar-01-21: Report errors to file to notify users, perform actions on other processes etc
 
+Name: watchdog
+Description: Detect down services and start them again
 
+NOTES:
+	- Mar_01-21: Check config, binaries etc permissions aswell to make sure all is okay
+	- Mar_01-21: Check file existence (to avoid problems)
+	- Mar-01-21: Report errors to file to notify users, perform actions on other processes etc
+	
 */
+
 
 #include <stdio.h>
 #include <stdlib.h>

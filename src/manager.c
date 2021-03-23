@@ -1,12 +1,28 @@
 /*
 
-	This code is part of the ArionsAV project.
-	
-	NOTES:
-		- Mar_01-21: A random password will be generated on a global variable, if a memory corruption exploit is trying to use functions as gadgets like disable_antivirus() a password will be needed, that will not allow an attacker to use it directly? Bypass could be jumping to a code that calls it. Randomize which variable use in each moment? NULL password variable after using it?
 
+    _         _                    ___     __
+   / \   _ __(_) ___  _ __  ___   / \ \   / /
+  / _ \ | '__| |/ _ \| '_ \/ __| / _ \ \ / / 
+ / ___ \| |  | | (_) | | | \__ \/ ___ \ V /  
+/_/   \_\_|  |_|\___/|_| |_|___/_/   \_\_/   
+                                            
+                                            
+     -- This code is part of the ArionsAV project --
+     
+           << Code under GNU General Public License >>
+          
+      [ Src: https://github.com/ArionsAV/arionsav ]
+	
+
+Name: manager
+Description: Managing-purpose functions
+
+NOTES:
+	- Mar_01-21: A random password will be generated on a global variable, if a memory corruption exploit is trying to use functions as gadgets like disable_antivirus() a password will be needed, that will not allow an attacker to use it directly? Bypass could be jumping to a code that calls it. Randomize which variable use in each moment? NULL password variable after using it?
 
 */
+
 
 #include <stdio.h>
 #include <stdlib.h>
