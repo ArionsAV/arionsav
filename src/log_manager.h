@@ -39,7 +39,11 @@ log file paths (for the moment both info and error are dumped on same file )
 #define MAX_TIME_SZ 18
 #endif
 
+/* time-related */
 
+#ifndef DATETIME_FORMAT
+#define DATETIME_FORMAT "%H:%M:%S %d-%m-%Y" /* format used for date in logs */
+#endif
 
 
 

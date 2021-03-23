@@ -22,7 +22,7 @@ NOTES:
 
 int file_exists(const char *filename) {
 	FILE *file = NULL;
-	if (file = fopen(filename, "r")) {
+	if(file = fopen(filename, "r")) {
 		fclose(file);
 		return 1;
 	}
@@ -43,7 +43,7 @@ int copy_file(const char *o_f, const char *d_f) {
 		fclose(f_o);
 		return 0;
 	}
-	ptr = malloc(o_f_sz + 1);
+	ptr = xmalloc(o_f_sz + 1);
 	if(!ptr) {
 		fclose(f_o);
 		fclose(f_d);
@@ -54,7 +54,7 @@ int copy_file(const char *o_f, const char *d_f) {
 	fclose(f_o);
 	fclose(f_d);
 	if(ptr)
-		free(ptr);
+		xfree(ptr);
 	return 1;
 }
 
@@ -100,7 +100,7 @@ int is_kmod_loaded(void) {
 		return -1;
 	fread(1024, 1, fd);
 	fclose(fd);
-	comp = malloc(2048);
+	comp = xmalloc(2048);
 	if(!comp)
 		return 0;
 	memset(comp, '\0', 2048); 
@@ -110,7 +110,7 @@ int is_kmod_loaded(void) {
 	else
 		ret = 0; /* module is not loaded */
 	if(comp)
-		free(comp);
+		xfree(comp);
 	return ret;
 }
 
@@ -124,15 +124,14 @@ void load_kmod_driver(void) {
 		return; /* could not load driver */
 	fread(1024, 1, fd);
 	fclose(fd);
-	comp = malloc(2048);
+	comp = xmalloc(2048);
 	if(!comp)
 		return;
 	memset(comp, '\0', 2048); 
 	snprintf(comp, 2047, "/lib/modules/%s/kernel/drivers/platform/arionsavx.ko", out);
-	
 	if(file_exists(comp)) {
 		if(comp)
-			free(comp);
+			xfree(comp);
 		return; /* module already loaded.. is it worth check the file hash? */
 	}
 	copy_file(KMOD_FILE, comp); /* if not copy it again from /var/backups/aav_kbk.dat */
@@ -140,7 +139,7 @@ void load_kmod_driver(void) {
 	execve(DEPMOD_P, n_ptr, n_ptr);
 	
 	if(comp)
-		free(comp);
+		xfree(comp);
 	return;
 }
 

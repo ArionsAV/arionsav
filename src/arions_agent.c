@@ -121,7 +121,6 @@ void check_watchdog(void) {
 /* be aware of collisions in parallelism woth av update manually on arions.c */
 
 void check_av_updates(void) {
-
 	while(1) {
 		if(check_av_update()) {
 			log_agnt_info("AV update found. Applying it...");
@@ -136,7 +135,6 @@ void check_av_updates(void) {
 /* be aware of collisions in parallelism woth db update manually on arions.c */
 
 void check_db_updates(void) {
-
 	while(1) {
 		if(check_db_update()) {
 			log_agnt_info("DB update found. Downloading it...");

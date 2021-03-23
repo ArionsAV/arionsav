@@ -30,7 +30,7 @@ pt_action *pt_ptr = NULL;
 
 
 int check_files_integrity(void) {
-	return 1;
+	return 1; /* still not implemented */
 }
 
 int check_esc(void) {
@@ -50,7 +50,7 @@ void watchdog(int pt_t) {
 	
 	if(pt_t == PT_MAIN) {
 		target = NULL;
-		check = NULL;
+		check = 0x1337;
 	} else if(pt_t == PT_SERVICE) {
 		target = set_up_srv;
 		check = is_srv_up;
@@ -68,7 +68,7 @@ void watchdog(int pt_t) {
 		exit(1);
 	}
 	
-	if(check = 0x1337) {
+	if(check == 0x1337) {
 		while(1) {
 			sleep(PT_MAIN_WAIT);
 			if(check_esc()) {

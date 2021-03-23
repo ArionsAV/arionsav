@@ -4,14 +4,22 @@
 
 #include "c_config/c_config.h"
 
+#ifndef DATETIME_FORMAT
+#define DATETIME_FORMAT "%H:%M:%S %d-%m-%Y" /* format used for date in logs */
+#endif
+
 /* pending: convert timestamp to format "h:m d:M:Y" */
 void return_time_str(char *out, size_t max_sz) {
-	strncpy(out, max_sz, "12:37 04-03-2021");
-	return;
+	time_t now = 0;
+	struct tm ts;
+	memset(out, '\0', max_sz);
+	time(&now);
+	ts = *localtime(&now);
+	strftime(out, max_sz - 1, DATETIME_FORMAT, &ts); /* format can be changed */
+        return;
 }
 
 void append_entry(const char *file_path, const char *append_content, const char *prefix, int time_prefix) {
-
 	FILE *f = NULL;
 	int pos = 0;
 	char comp_append_data[MAX_APPEND_DATA];
