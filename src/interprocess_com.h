@@ -19,7 +19,7 @@ Name: interprocess_com
 Description: Interprocess communication purpose source
 
 NOTES:
-
+	- Mar_24-21: Make sure to set permisisons correctly so unprivileged users cannot intercept AV communications
 
 */
 

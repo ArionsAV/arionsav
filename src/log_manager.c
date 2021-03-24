@@ -31,9 +31,6 @@ NOTES:
 #include "log_manager.h"
 #include "c_config/c_config.h"
 
-#ifndef DATETIME_FORMAT
-#define DATETIME_FORMAT "%H:%M:%S %d-%m-%Y" /* format used for date in logs */
-#endif
 
 /* pending: convert timestamp to format "h:m d:M:Y" */
 void return_time_str(char *out, size_t max_sz) {

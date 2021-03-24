@@ -39,22 +39,6 @@ NOTES:
 #include "interprocess_com.h"
 #include "c_config/c_config.h"
 
-#ifndef EXCEPTIONS_PATH
-#define EXCEPTIONS_PATH ""
-#endif
-
-#ifndef AV_INFO_PATH
-#define AV_INFO_PATH ""
-#endif
-
-#ifndef MAX_PATH
-#define MAX_PATH 4096
-#endif
-
-#ifndef MAX_EXCEPTIONS
-#define MAX_EXCEPTIONS 128
-#endif
-
 typedef struct {
 	int status; /* 1 av enabled, else if 0 disabled */
 	float version; /* antivirus current version */

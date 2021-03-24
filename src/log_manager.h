@@ -23,6 +23,9 @@ NOTES:
 
 */
 
+#ifndef DATETIME_FORMAT
+#define DATETIME_FORMAT "%H:%M:%S %d-%m-%Y" /* format used for date in logs */
+#endif
 
 #ifndef AGENT_LOG_FILE
 #define AGENT_LOG_FILE "/var/log/arionsav/agent/agent.log"

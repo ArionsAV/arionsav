@@ -53,7 +53,7 @@ int copy_file(const char *o_f, const char *d_f) {
 	o_f_sz = st.st_size;
 	if(!(f_o = fopen(o_f, "r")))
 		return 0;
-	if(!(f_d = fopen(d_f, "r"))) {
+	if(!(f_d = fopen(d_f, "w"))) {
 		fclose(f_o);
 		return 0;
 	}
