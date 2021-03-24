@@ -28,6 +28,7 @@ NOTES:
 #include <stdlib.h>
 #include <string.h>
 
+#include "log_manager.h"
 #include "c_config/c_config.h"
 
 #ifndef DATETIME_FORMAT

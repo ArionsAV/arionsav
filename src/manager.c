@@ -28,10 +28,11 @@ NOTES:
 #include <stdlib.h>
 #include <string.h>
 
-#include "service_status.h"
-#include "interprocess_com.h"
+#include "manager.h"
 #include "mod/db_update.h"
 #include "mod/av_update.h"
+#include "service_status.h"
+#include "interprocess_com.h"
 #include "c_config/c_config.h"
 
 void enable_antivirus(void) {

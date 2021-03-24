@@ -23,6 +23,12 @@ NOTES:
 	
 */
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include "quarantine.h"
+
 int add_entity_to_quarantine(char *path) {
 	return 1;
 }

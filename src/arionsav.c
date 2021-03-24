@@ -28,6 +28,7 @@ NOTES:
 #include <string.h>
 
 #include "manager.h"
+#include "arionsav.h"
 
 void parse_args(int n_args, char *args[]) {
 

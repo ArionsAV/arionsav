@@ -28,6 +28,7 @@ NOTES:
 #include <stdlib.h>
 #include <string.h>
 
+#include "service.h"
 #include "log_manager.h"
 #include "service_status.h"
 #include "interprocess_com.h"

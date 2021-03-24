@@ -23,8 +23,12 @@ NOTES:
 	
 */
 
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <libnotify/notify.h>
+
+#include "notification.h"
 
 int pop_notification(char *name, char *description) {
 	NotifyNotification *n = NULL;

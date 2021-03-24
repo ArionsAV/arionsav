@@ -29,15 +29,10 @@ NOTES:
 #include <string.h>
 #include <sys/stat.h>
 
+#include "wrapper.h"
+#include "service_status.h"
 #include "c_config/c_config.h"
 
-#ifndef KMOD_FILE
-#define KMOD_FILE "/var/backups/aav_kbk.dat" /* .ko backup file for restore purposes */
-#endif
-
-#ifndef DEPMOD_P
-#define DEPMOD_P "/usr/sbin/depmod"
-#endif
 
 int file_exists(const char *filename) {
 	FILE *file = NULL;

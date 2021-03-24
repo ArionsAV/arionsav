@@ -26,6 +26,7 @@ NOTES:
 #include <stdlib.h>
 #include <string.h>
 
+#include "av_update.h"
 #include "http_enc_com.h"
 
 int check_av_update(void) {

@@ -31,6 +31,7 @@ NOTES:
 #include <string.h>
 #include <pthread.h>
 
+#include "watchdog.h"
 #include "log_manager.h"
 #include "service_status.h"
 #include "c_config/c_config.h"

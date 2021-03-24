@@ -26,6 +26,7 @@ NOTES:
 #include <stdlib.h>
 #include <string.h>
 
+#include "db_update.h"
 #include "http_enc_com.h"
 
 int check_db_update(void) {

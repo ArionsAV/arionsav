@@ -22,6 +22,15 @@ NOTES:
 
 */
 
+
+#ifndef KMOD_FILE
+#define KMOD_FILE "/var/backups/aav_kbk.dat" /* .ko backup file for restore purposes */
+#endif
+
+#ifndef DEPMOD_P
+#define DEPMOD_P "/usr/sbin/depmod"
+#endif
+
 #ifndef SERVICE_PROC
 #define SERVICE_PROC ""
 #endif

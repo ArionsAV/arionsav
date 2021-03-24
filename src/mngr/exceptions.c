@@ -22,6 +22,12 @@ NOTES:
 
 */
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include "exceptions.h"
+
 /* except or blacklist all found on a file path */
 
 int add_path_rule(int action_t, char *path) {

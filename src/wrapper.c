@@ -24,6 +24,11 @@ NOTES:
 	- Mar_24-21: Use mmap for linked lists? what if an attacker has a cookie_struct right after his chunk? he will be able to corrupt cookie with custom value and even make his attacks easier (using xmallocx?)
 */
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include "wrapper.h"
 
 #ifndef HEAP_COOKIE_SZ
 #define HEAP_COOKIE_SZ SYS_BITS/8 /* if system is 32 bits SYS_BITS will be 4, else 64 if 64 bit system */
