@@ -35,11 +35,54 @@ NOTES:
 #include "interprocess_com.h"
 #include "c_config/c_config.h"
 
+#ifndef AV_INFO_PATH
+#define AV_INFO_PATH ""
+#endif
+
+typedef struct {
+	int status; /* 1 av enabled, else if 0 disabled */
+	float version; /* antivirus current version */
+} av_info;
+
+av_info *current_info = NULL;
+
 void enable_antivirus(void) {
-	return;	
+	FILE *f = NULL;
+	if(!current_info) {
+		current_info = (av_info *)xmallocx(sizeof(av_info));
+		f = fopen(AV_INFO_PATH, "r");
+		fread(current_info, sizeof(av_info), sizeof(char), f);
+		fclose(f);
+	}
+	if(current_info.status == 1)
+		return; /* antivirus already disabled */
+	current_info.status = 1;
+	if(version == 0)
+		current_info.version = 1.0;
+	/* now we have to make changes on filesystem */
+	f = fopen(AV_INFO_PATH, "w");
+	fwrite(current_info, sizeof(av_info), sizeof(char), f);
+	fclose(f);
+	return;
 }
 
 void disable_antivirus(void) {
+	FILE *f = NULL;
+	if(!current_info) {
+		current_info = (av_info *)xmallocx(sizeof(av_info));
+		f = fopen(AV_INFO_PATH, "r");
+		fread(current_info, sizeof(av_info), sizeof(char), f);
+		fclose(f);
+	}
+	if(current_info.status == 0)
+		return; /* antivirus already disabled */
+	current_info.status = 0;
+	if(version == 0)
+		current_info.version = 1.0;
+	/* now we have to make changes on filesystem */
+	f = fopen(AV_INFO_PATH, "w");
+	fwrite(current_info, sizeof(av_info), sizeof(char), f);
+	fclose(f);
 	return;
 }
 
